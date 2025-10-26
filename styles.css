@@ -1,0 +1,161 @@
+/* Box model*?
+/*Footer Styling */
+footer {
+  background-color:#659f8f;
+  color: #659f8f; /* White text color */
+  padding: 50px; /* Spacing inside the footer */
+  /*text-align: center; /* Center-align text */
+  font-family: Arial, sans-serif; /* Font style */
+  font-size: 14px; /* Font size */
+ 
+}
+/*box in desktop form them we will go down to mobile*/
+.box {
+    display: flex;
+        justify-content:space-evenly;
+ 
+}
+
+
+
+/* Optional: Styling for links within the footer */
+footer a {
+  color:black; /* White link color */
+  text-decoration: none; /* Remove underline from links */
+  margin: 0 20px; /* Space between links */
+
+}
+
+/*line colour*/
+hr {
+  border: none; /* Removes the default border */
+  height: 1px; /* Sets the thickness of the line */
+  background-color: #d86943; /* Sets the color of the line */
+}
+
+/* form size*/
+#email
+    {
+     padding: 15px 32px;
+     border-radius: 6px;
+    }
+    
+/*button color*/
+button {
+    background-color: #d86943;
+    
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/*Colour font fir different divs*/
+.subscribe {
+    color:black;
+}
+.links {
+    color:black;
+}
+.technologies {
+    color:black;
+
+}
+.url {
+    color:black
+}
+
+ .no-bullets {
+        list-style-type: none;
+        /* Optional: Remove default padding and margin for further control */
+        padding: 0;
+        margin: 0;
+    }
+
+.li {
+  text-align: left;
+}
+
+/* Decreasing the size of the Image*/
+img {
+  width: 20%; /* Sets the width to 50% of its parent container */
+  height: auto; /* Adjusts height proportionally to maintain aspect ratio */
+}
+
+/*Media Queries*/
+@media (max-width:768px) {
+    .box {
+    /* 1. Activate Grid Layout */
+    display: grid;
+
+    /* 2. Define the Grid Template */
+    /* This creates a 2x2 structure (2 columns, 2 rows) */
+    /* The columns are set to take up equal space (1fr) */
+    grid-template-columns: 1fr 1fr;
+
+    /* 3. Define the Grid Areas (Optional, but makes placement clearer) */
+    /* The layout looks like this:
+        | top | top |
+        | left| right |
+    */
+    grid-template-areas:
+        "top top"
+        "left right";
+
+    /* General styling for visibility */
+    width: 80%;
+    margin: 0px auto;
+    gap: 10px; /* Space between all grid items */
+    padding: 10px;
+    
+}
+}
+
+/* 4. Position Div 1 to span both columns in the top row */
+.subscribe {
+    grid-area: top;
+    
+    padding: 0px;
+    text-align: left;
+}
+
+/* 5. Position Div 2 in the bottom-left cell */
+.links {
+    grid-area: left;
+    
+    padding: 0px;
+    text-align: left;
+}
+
+/* 6. Position Div 3 in the bottom-right cell */
+.technologies {
+    grid-area: right;
+    
+    padding: 0px;
+    text-align: left;
+}
+    
+    
+
+
+@media (max-width:425px) {
+    .box {
+        display: flex;
+        justify-content:space-evenly;
+        flex-direction:column;
+  
+    
+   
+    }
+    border: 0.5px;
+}
